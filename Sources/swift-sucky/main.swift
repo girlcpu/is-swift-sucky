@@ -51,14 +51,19 @@ guard let inputExpression = readLine() else {
 }
 
 // this is not stripping the non-digit non-math chars from the input? wtf is that about)
-let validExpressionRegex = /[\d\+\-\/\*]/
-let cleanExpression = inputExpression.matches(of: validExpressionRegex).compactMap { match in
-    match.output
-}.joined(separator: "")
+// ITS JUST MATCHING AS ONE BIG BLOB
+// ok refactored to not worry about the match output but still whats goin on?
 
-if cleanExpression.count <= 0 {
+let invalidExpression = /[^\d\+\-\/\*]+/
+let isExpressionValid = !inputExpression.contains(invalidExpression)
+
+if !isExpressionValid {
     fatalError("Invalid expression")
 }
+
+let segments = inputExpression.split(whereSeparator: { _ in
+    true
+})
 
 print("TEST: You submitted the expression: \(inputExpression)")
 
