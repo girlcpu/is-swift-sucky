@@ -28,8 +28,6 @@
 // what else should I make it do? read from stdin?
 // good old calculator
 
-print("Calculator")
-
 // i think print() does println() newline
 // is there a regular print or prompt builtin?
 
@@ -41,6 +39,24 @@ print("Calculator")
 // ok nice we have readLine()
 // probably don't even need Foundation, commenting
 
-if let expression = readLine() {
-    print("TEST: You submitted the expression: \(expression)")
+import Darwin
+
+print("Calculator")
+print("EQUATION = ", terminator: "")
+
+guard let expression = readLine() else {
+    fatalError("Did not receive an expression")
 }
+
+let validExpressionRegex = /[\d+-\/*]/
+let cleanExpression = expression.matches(of: validExpressionRegex).compactMap { match in
+    match.output
+}.joined(separator: "")
+
+if cleanExpression.count <= 0 {
+    fatalError("Invalid expression")
+}
+
+print("TEST: You submitted the expression: \(expression)")
+
+// just flowed all of this out, i think this is smoother than before
