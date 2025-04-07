@@ -8,3 +8,4 @@ print("Hello, Chungusville!")
 // expressions are not allowed at top level
 // i thought you can write scripts in swift too?
 // maybe its a target issue in package.swift
+// changed it to executable and still no top level? i really thought we had that

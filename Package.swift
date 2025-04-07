@@ -11,7 +11,7 @@ let package = Package(
         // trying to change it, confirmed '.executable' with same name/targets params
         // and it just inserted the whole snippet for a new .executable? what happened
         // to smart replacing? pointless to manually delete the rest of the template :(
-        .executable(name: String, targets: [String])(
+        .executable(
             name: "swift-sucky",
             targets: ["swift-sucky"])
     ],
