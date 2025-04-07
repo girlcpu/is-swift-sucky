@@ -62,3 +62,23 @@ if cleanExpression.count <= 0 {
 print("TEST: You submitted the expression: \(expression)")
 
 // just flowed all of this out, i think this is smoother than before
+// too much kotlin lately, keep trying to write "fun"
+// bonus points to the builtin formatter, it is not fucking with my comments at all
+
+// these should tidy up the expression code above
+
+func add(a: Float, b: Float) -> Float {
+    a + b
+}
+
+func sub(a: Float, b: Float) -> Float {
+    a - b
+}
+
+func mult(a: Float, b: Float) -> Float {
+    a * b
+}
+
+func div(a: Float, b: Float) -> Float {
+    a / b
+}
