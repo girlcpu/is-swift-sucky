@@ -61,9 +61,9 @@ if !isExpressionValid {
     fatalError("Invalid expression")
 }
 
-let segments = inputExpression.split(whereSeparator: { _ in
-    true
-})
+let segments = inputExpression.reduce<[String]>([]) { partialResult, Character in
+    []
+}
 
 print("TEST: You submitted the expression: \(inputExpression)")
 
