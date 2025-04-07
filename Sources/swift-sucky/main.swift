@@ -46,13 +46,13 @@
 print("Calculator")
 print("EQUATION = ", terminator: "")
 
-guard let expression = readLine() else {
+guard let inputExpression = readLine() else {
     fatalError("Did not receive an expression")
 }
 
-let validExpressionRegex = /[\d+-\/*]/
-let cleanExpression = expression.matches(of: validExpressionRegex).compactMap { match in
 // this is not stripping the non-digit non-math chars from the input? wtf is that about)
+let validExpressionRegex = /[\d\+\-\/\*]/
+let cleanExpression = inputExpression.matches(of: validExpressionRegex).compactMap { match in
     match.output
 }.joined(separator: "")
 
@@ -60,7 +60,7 @@ if cleanExpression.count <= 0 {
     fatalError("Invalid expression")
 }
 
-print("TEST: You submitted the expression: \(expression)")
+print("TEST: You submitted the expression: \(inputExpression)")
 
 // just flowed all of this out, i think this is smoother than before
 // too much kotlin lately, keep trying to write "fun"
