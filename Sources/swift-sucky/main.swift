@@ -39,7 +39,9 @@
 // ok nice we have readLine()
 // probably don't even need Foundation, commenting
 
-import Darwin
+// import Darwin
+// haha i left this in from math testing
+// BYE DARWIN can't wait to need you in 5 minutes
 
 print("Calculator")
 print("EQUATION = ", terminator: "")
