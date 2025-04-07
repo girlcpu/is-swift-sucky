@@ -52,6 +52,7 @@ guard let expression = readLine() else {
 
 let validExpressionRegex = /[\d+-\/*]/
 let cleanExpression = expression.matches(of: validExpressionRegex).compactMap { match in
+// this is not stripping the non-digit non-math chars from the input? wtf is that about)
     match.output
 }.joined(separator: "")
 
