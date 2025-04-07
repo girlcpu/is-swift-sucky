@@ -1,5 +1,4 @@
-# is-swift-sucky
-is swift still sucky?
+# is swift still sucky?
 
 every once in a while i ask myself if swift tooling outside of xcode still sucks
 
