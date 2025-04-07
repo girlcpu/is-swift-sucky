@@ -7,6 +7,7 @@ let package = Package(
     name: "swift-sucky",
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
+t         // ok maybe i need to change this 
         .library(
             name: "swift-sucky",
             targets: ["swift-sucky"]),
@@ -16,6 +17,7 @@ let package = Package(
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "swift-sucky"),
+        // im not writing unit tests for this how do i make this not generate
         .testTarget(
             name: "swift-suckyTests",
             dependencies: ["swift-sucky"]
